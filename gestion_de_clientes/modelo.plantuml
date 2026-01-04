@@ -1,0 +1,31 @@
+@startuml gestorClientes
+
+class Usuario {
+   - String completeName
+   - int idUser
+   - String userName
+   - String password
+   - UserRol rol
+   - historial : Historial [50]
+
+    + cambiarNombre()
+    + actualizarContraseña()
+    + actualizarHistorial()
+}
+
+class userManager{
+    - usuarios : Usuario[20]
+    + añdirUsuario()
+    + buscarUsuario()
+    + eliminarUsuario()
+
+}
+
+enum UserRol{
+    ADMINISTRADOR
+    STANDAR
+}
+
+
+
+@enduml
